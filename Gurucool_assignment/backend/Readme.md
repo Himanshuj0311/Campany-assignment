@@ -1,22 +1,28 @@
-Welcome to Your URL Shortening and User Management API 🚀
+Welcome to Your URL Shortening and User Management API 🚀[ baseUrl`http://localhost:8000`]
+
 
 Table of Contents 
 
-[ baseUrl`http://localhost:8000`]
 Introduction
 🚀 API Usage
 URL Shortening
 User Management
 🌟 Key Functionalities
 💻 Implementation Details
+
+
 1. Introduction
 Welcome to the documentation for your supercharged URL Shortening and User Management API! Below, you'll find everything you need to know to get started.
+
 
 2. 🚀 API Usage
 URL Shortening
 2.1 Shorten URL
+   
 Endpoint: POST /url/shorten
+
 Description: Shorten a given URL.
+
 Request:
 json
 Copy code
