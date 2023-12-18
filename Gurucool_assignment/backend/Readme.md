@@ -1,5 +1,8 @@
 Welcome to Your URL Shortening and User Management API 🚀
-Table of Contents [ baseUrl`http://localhost:8000`]
+
+Table of Contents 
+
+[ baseUrl`http://localhost:8000`]
 Introduction
 🚀 API Usage
 URL Shortening
