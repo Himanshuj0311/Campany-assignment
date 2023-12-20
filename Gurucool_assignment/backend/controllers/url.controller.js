@@ -4,14 +4,14 @@ const shortid = require("shortid");
 // Controller method for URL shortening
 const shortenUrl = async (req, res) => {
   try {
-    const { url } = req.body;
-    if (!url) {
+    const { longUrl } = req.body;
+    if (!longUrl) {
       return res
         .status(400)
         .json({ message: "URL is required", success: false });
     }
 
-    const existingUrl = await UrlModel.findOne({ longUrl: url });
+    const existingUrl = await UrlModel.findOne({ longUrl: longUrl });
 
     if (existingUrl) {
       return res.status(200).json({
@@ -23,7 +23,7 @@ const shortenUrl = async (req, res) => {
 
     const shortenedUrl = shortid.generate();
 
-    const newUrl = new UrlModel({ longUrl: url, shortUrl: shortenedUrl });
+    const newUrl = new UrlModel({ longUrl: longUrl, shortUrl: shortenedUrl });
     await newUrl.save();
 
     return res.status(200).json({
